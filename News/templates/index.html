@@ -1,0 +1,13 @@
+{% extends 'flatpages/default.html' %}
+{% load static %}
+
+{% block content %}
+  <h1>All Posts and Articles</h1>
+  <ul>
+    {% for post_or_article in all_posts_and_articles %}
+      <li>{{ post_or_article.title }} - {{ post_or_article.data }}</li>
+      <p>{{ post_or_article.text }}</p>
+
+    {% endfor %}
+  </ul>
+{% endblock %}
